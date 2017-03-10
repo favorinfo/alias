@@ -1,0 +1,1 @@
+alias pip="noglob pip" # allows square brackets for pip command invocation

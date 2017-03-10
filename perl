@@ -1,0 +1,8 @@
+alias pbi='perlbrew install'
+alias pbl='perlbrew list'
+alias pbo='perlbrew off'
+alias pbs='perlbrew switch'
+alias pbu='perlbrew use'
+alias pd='perldoc'
+alias ple='perl -wlne'
+alias latest-perl='curl -s http://www.perl.org/get.html | perl -wlne '\''if (/perl\-([\d\.]+)\.tar\.gz/) { print $1; exit;}'\'

@@ -1,0 +1,2 @@
+alias e64=encode64
+alias d64=decode64

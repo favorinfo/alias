@@ -1,0 +1,2 @@
+alias set644='find . -type f ! -perm 644 -print0 | xargs -0 chmod 644'
+alias set755='find . -type d ! -perm 755 -print0 | xargs -0 chmod 755'

@@ -1,0 +1,2 @@
+alias pyfind='find . -name "*.py"'
+alias pygrep='grep --include="*.py"'

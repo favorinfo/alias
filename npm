@@ -1,0 +1,9 @@
+alias npmg="npm i -g "
+alias npmS="npm i -S "
+alias npmD="npm i -D "
+alias npmE='PATH="$(npm bin)":"$PATH"'
+alias npmO="npm outdated"
+alias npmV="npm -v"
+alias npmL="npm list"
+alias npmst="npm start"
+alias npmt="npm test"

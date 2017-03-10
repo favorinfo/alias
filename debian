@@ -1,0 +1,10 @@
+alias age='apt-get'
+alias api='aptitude'
+alias acs="apt-cache search"
+alias aps='aptitude search'
+alias as="aptitude -F \"* %p -> %d \n(%v/%V)\" \
+alias afs='apt-file search --regexp'
+alias asrc='apt-get source'
+alias app='apt-cache policy'
+alias allpkgs='aptitude search -F "%p" --disable-columns ~i'
+alias mydeb='time dpkg-buildpackage -rfakeroot -us -uc'

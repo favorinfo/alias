@@ -1,0 +1,1 @@
+alias kaput="tail -f ~/Library/Logs/Pow/apps/*"

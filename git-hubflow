@@ -1,0 +1,6 @@
+alias ghf='git hf'
+alias ghff='git hf feature'
+alias ghfr='git hf release'
+alias ghfh='git hf hotfix'
+alias ghfs='git hf support'
+alias ghfu='git hf update'
