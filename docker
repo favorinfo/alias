@@ -1,0 +1,22 @@
+
+###docker
+alias doc='docker attach --sig-proxy=false'
+alias de='docker exec -it'
+alias dp='docker ps'
+alias di='docker inspect'
+alias dr='docker run --rm -it --cpu-shares 10 -m 2g'
+alias drn='dr --name'
+alias drm='docker rm'
+alias dri='docker rmi'
+alias dim='docker images'
+alias dl='docker logs -f'
+alias dit='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz images -t'
+alias db='docker build -t'
+
+
+test "$DOCKER_REGISTRY" || read -p "请输入镜像地址: " DOCKER_REGISTRY
+dlogin(){ args='' ; test "$DOCKER_USER" && args="-u $DOCKER_USER"; docker login $args ${DOCKER_REGISTRY%%/*} ; }
+dpull(){ s=$DOCKER_REGISTRY/$1; docker pull $s && docker $s $1 && docker rmi $s; }
+dpush(){ d=$DOCKER_REGISTRY/$1; docker tag $1 $d && $docker push $d && docker rmi $d; }
+ppull(){ t=$(echo $1| sed 's/:/_/'); s=$DOCKER_REGISTRY/private:$t; docker pull $s; docker tag $s $1 && docker rmi $s; }
+ppush(){ t=$(echo $1| sed 's/_/:/'); d=$DOCKER_REGISTRY/private:$t; docker tag $1 $d && docker push $d &&  docker rmi $d; }
